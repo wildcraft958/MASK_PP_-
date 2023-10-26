@@ -1,0 +1,121 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.8)), url("assests/background.jpg");
+}
+.header{
+    margin: 30px;
+    color:white;
+    display: flex;
+    justify-content: center;
+    font-size: 60px;
+    font-weight:400;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.hero{
+    padding: 20px;
+    border-radius: 10px;
+    margin: 40px auto;
+    width: 80%;
+    background-color: #444444;
+}
+.list{
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+}
+.card{
+    display: grid;
+    margin: 20px;
+    padding: 10px;
+    background:#555555;
+    border-radius: 10px;
+    text-align: center;
+}
+.card h1{
+    font-weight: 500;
+    color: #000
+}
+.card img{
+    font-size: 60%;
+    width: 140px;
+    height: 140px;
+    border-radius: 15px;
+    margin-top: 3px;
+    margin-bottom: 14px;
+}
+label{
+    display: block;
+    width: 200px;
+    background-color:#777777;
+    padding: 12px;
+    margin: 10px auto;
+    border-radius: 8px;
+    border-width: 2px;
+    border-color: #d0d0d0;
+    border-style: solid;
+    cursor: crosshair;
+}
+label h3{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color:white;
+}
+.div-line{
+    width: 70%;
+    margin: 5px auto;
+    display: block;
+    height: 0px;
+    border: 1px solid #777777;
+}
+.uimgb{
+    text-align: center;
+}
+.member-desc {
+    margin-top: 14px;
+    margin-bottom: 14px;
+    display: block;
+    font-size: 0.88em;
+    word-wrap: break-word;
+    hyphens: auto;
+    color: #d0d0d0
+}
+.teamlist {
+    margin-top: 2px;
+    align-self: flex-end;
+}
+.teamlist span img{
+    height: 24px;
+    width: 24px;
+    color: #d0d0d0;
+}
+input{
+    display: none;
+}
+#nameInput, #submitButton {
+    display: block;
+}
+#nameResult {
+    display: none;
+}
+
+#profile-pic-container {
+    text-align: center;
+}
+
+#profile-pic {
+    display: inline-block;
+}
+.form-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+#submitButton{
+    margin-top: 4px;
+}

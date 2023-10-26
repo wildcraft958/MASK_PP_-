@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MASK</title>
+    <link rel="shortcut icon" href="assests/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">PROFILE PICTURE & INFO RENEWAL FORM 23'</div>
+    <div class="hero">
+        <div class="list">
+            <div class="card">
+                <div id="profile-pic-container">
+                    <img src="assests/blank.webp" id="profile-pic">
+                </div>
+                <div class="div-line">&nbsp;</div>
+                <div class="member-desc" id="nameResult"></div>
+                <div class="teamlist">
+                    <span><img src="icons/amv.png"></span>
+                    <span><img src="icons/design.png"></span>
+                    <span><img src="icons/newsletter.png"></span>
+                    <span><img src="icons/quiz.png"></span>
+                    <span><img src="icons/webdev.png"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Second hero for form-->
+    <div class="hero">
+        <div class="form-container">
+            <form id="nameForm">
+                <input type="text" id="nameInput" placeholder="Enter your name">
+                <input type="submit" id="submitButton" value="Submit">
+            </form>
+        </div>
+        <label for="uploaded-img"><h3 class="uimgb">Upload image</h3></label>
+        <input type="file" accept="image/jpeg, image/png, image/jpg, image/webp" id="uploaded-img">
+    </div>
+
+    <script>
+        //script for profile page change
+        let profilePic = document.getElementById("profile-pic");
+        let uploadedImg = document.getElementById("uploaded-img");
+
+        uploadedImg.onchange = function () {
+            profilePic.src = URL.createObjectURL(uploadedImg.files[0]);
+        }
+    </script>
+    <script>
+        document.getElementById('nameForm').addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent the form from submitting
+
+            // Get the input value
+            var name = document.getElementById('nameInput').value;
+
+            // Display the submitted name in the same place
+            var nameResult = document.getElementById('nameResult');
+            nameResult.textContent = name;
+            nameResult.style.display = 'block';
+
+            // Hide the input field and submit button
+            document.getElementById('nameInput').style.display = 'none';
+            document.getElementById('submitButton').style.display = 'none';
+        });
+    </script>
+</body>
+</html>
